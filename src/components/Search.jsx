@@ -64,7 +64,9 @@ export default function Search() {
     };
     
     const handleRest = () => {
-        //ToDo impalment Later// 
+        setCharacterData(null);
+        setComicData(null);
+        setCharacterName("")  
     };
 
     return (
