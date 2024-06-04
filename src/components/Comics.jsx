@@ -8,7 +8,9 @@ export default function Comics({data}) {
 
         return (
             <a key={comic.id} className="comicCard" style={{
-                background: `url`
+                background: `url(${comic.thumbnail.path}.${comic.thumbnail.extension}) no-repeat center`,
+                backgroundSize: "cover",
+                
             }}>
 
             </a>
