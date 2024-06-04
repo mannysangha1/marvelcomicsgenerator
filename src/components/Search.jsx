@@ -44,7 +44,7 @@ export default function Search() {
         const timeStamp = new Date().getTime();
         const hash = generateHash(timeStamp);
 
-        const url = `http://gateway.marvel.com:443/v1/public/characters/${characterId}/comics?apikey=${publicKey}&hash=${hash}&ts=$(timeStamp)`;
+        const url = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/comics?apikey=${publicKey}&hash=${hash}&ts=$(timeStamp)`;
 
         fetch(url).then((response) => response.json()).then((result) => {
             setComicData(result.data);
