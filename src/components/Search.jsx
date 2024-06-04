@@ -46,9 +46,9 @@ export default function Search() {
 
         const url = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/comics?apikey=${publicKey}&hash=${hash}&ts=$(timeStamp)`;
 
-        fetch(url).then((response) => response.json()).then((result) => {
-            setComicData(result.data);
-            console.log(result.data)
+        fetch(url).then((response) => response.json()).then((results) => {
+            setComicData(results.data);
+            console.log(results.data)
         }).catch(error => {
             console.log("Error while fetching comic", error)
         });
