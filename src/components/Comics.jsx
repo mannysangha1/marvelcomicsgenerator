@@ -10,9 +10,14 @@ export default function Comics({data}) {
             <a key={comic.id} className="comicCard" style={{
                 background: `url(${comic.thumbnail.path}.${comic.thumbnail.extension}) no-repeat center`,
                 backgroundSize: "cover",
-                
-            }}>
 
+            }}
+            href={detailsURL}
+            target="_blank"
+            rel="noreferrer"
+            >
+                <div className="caption">{comic.title}</div>
+                <div className="caption bottom">View Comic Details</div>
             </a>
         )
         })}
